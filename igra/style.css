@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+header img{
+    width: 30%;
+}
+
+section{
+    background-color: rgb(40, 40, 204);
+    text-align: center;
+    color: white;
+    padding-top: 20px ;
+    padding-bottom: 20px ;
+}
+
+main{
+ background-color: rgb(194, 226, 226);
+}
+main img{
+    width: 15%;
+    margin-left: 5%;
+    margin-top: 5%;
+    position:absolute;
+    left:0%; 
+    transition:left 1s;
+}
+
+li{
+    display: flex;
+    padding:5% 0%;
+}
+
+
+.car {
+    margin-top: 8%;
+    margin-left: 20%;
+    width: 100%;
+    height: 35px;
+    border-left: solid;
+    display: flex;
+    border-bottom: solid ;
+    justify-content: space-between;
+}
+.car span{
+
+    height: 35px;
+    border-right: solid;
+}
+
+footer{
+    background-color: rgb(40, 40, 204);
+    text-align: center;
+    padding-top: 20px ;
+    padding-bottom: 20px ;
+}
+.start-new-game{
+    color: rgb(40, 40, 204);
+    background-color: rgb(180, 180, 180);
+}
