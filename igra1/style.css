@@ -1,0 +1,68 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-top:20px ;
+}
+header img {
+    width: 20%;
+}
+
+#upatstvo, footer {
+    background-color: rgb(40, 40, 204);
+	color: #fff;
+	padding: 15px;
+	text-align: center;
+}
+main{
+    background-color: rgb(194, 226, 226);
+}
+main ul {
+	width: 100%;
+	max-width: 800px;
+	margin: auto;
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-template-rows: repeat(1fr, auto);
+	gap: 20px;
+}
+
+main img{
+    border: solid  rgb(40, 40, 204) 5px;
+    border-radius: 50%;
+    background-color: white;
+}
+ul{
+    list-style: none;
+}
+input[type="checkbox"]{
+	display: none;
+}
+label{
+	position: relative;
+	display: block;
+}
+input[type="checkbox"]:checked + label:after {
+content: url(assets/images/am-logo.svg);
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+position: absolute;
+width: 80%;
+transition: 0.5s;
+
+
+}
+input[type="checkbox"]:checked + label img{
+	filter: blur(5px)  grayscale(1);
+	opacity: .3;
+    transition: filter 0.5s ;
+
+}
+button {
+	padding: 5px;
+	font-weight: bold;
+	border: 0;
+	outline: none;
+	background-color: #bbb;
+	color: rgb(40, 40, 204);
+}
