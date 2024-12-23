@@ -1,55 +1,55 @@
-
 @media (prefers-color-scheme: light) {
-  :root {
-    --pozadina: #fff;
-    --kalkulator: #ddd;
-    --display: #ddd;
-    --display-text: #000;
-    --button: #ccc;
-    --button-hover: hsl(0, 0%, 50%);
-    --button-text: #000;
-    --button-hover-text: #fff;
-    --button-active: #fff;
-    --button-active-text: hsl(0, 0%, 30%);
-    --button-operator:#ffa500;
-    --button-operator-text:#000;
-    --button-operator-hover:hsl(39, 100%, 70%);
-    --button-operator-hover-text:#fff;
-    --button-operator-active:#fff;
-    --button-operator-active-text:#ffa500;
-
+    :root {
+      --text-color: #000;
+      --pozadina: #fff;
+      --kalkulator: #ddd;
+      --display: #ddd;
+      --display-text: #000;
+      --button: #ccc;
+      --button-hover: hsl(0, 0%, 50%);
+      --button-text: #000;
+      --button-hover-text: #fff;
+      --button-active: #fff;
+      --button-active-text: hsl(0, 0%, 30%);
+      --button-operator:#ffa500;
+      --button-operator-text:#000;
+      --button-operator-hover:hsl(39, 100%, 70%);
+      --button-operator-hover-text:#fff;
+      --button-operator-active:#fff;
+      --button-operator-active-text:#ffa500;
+  
+    }
   }
-}
-
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --pozadina: #666;
-    --kalkulator:#000;
-    --button: #666;
-    --button-text: #fff;
-    --button-hover: hsl(0, 0%, 60%);
-    --button-hover-text: #fff;
-    --button-active:hsl(0,0%,80%);
-    --button-active-text:#2c2c2c;  
-    --button-operator:#ffa500;
-    --button-operator-text:#000;
-    --button-operator-hover:hsl(39, 100%, 70%);
-    --button-operator-hover-text:#fff;
-    --button-operator-active:#fff;
-    --button-operator-active-text:#ffa500;
+  
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text-color: #fff;
+      --pozadina: #666;
+      --kalkulator:#000;
+      --button: #666;
+      --button-text: #fff;
+      --button-hover: hsl(0, 0%, 60%);
+      --button-hover-text: #fff;
+      --button-active:hsl(0,0%,80%);
+      --button-active-text:#2c2c2c;  
+      --button-operator:#ffa500;
+      --button-operator-text:#000;
+      --button-operator-hover:hsl(39, 100%, 70%);
+      --button-operator-hover-text:#fff;
+      --button-operator-active:#fff;
+      --button-operator-active-text:#ffa500;
+    }
   }
-}
-
 
 body{
-  display: flex;
+    display: flex;
   justify-content: center;
   background-color: var(--pozadina);
+  color: var(--text-color);
 }
-
 .calculator{
-  width: 485px;
+    width: 485px;
   background-color: var(--kalkulator);
   border-radius: 10px;
 }
@@ -64,59 +64,54 @@ body{
   color: var(--display-text);
   font-size: 60px;
 }
+ul{
+    display: grid;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: repeat(5, 100px);
+    padding: 20px;
+    gap: 15px;
+  }
 li{
-  list-style: none;
-}
-button{
-  width: 100%;
-  height: 100%;
-  border-radius: 50px;
-  border: none;
-  color: var(--button-text);
-  background-color: var(--button);
-  cursor: pointer;
-  font-size: 60px;
-  font-weight: bold;
+    list-style: none;
+  }
+#clear{
+    width:200px ;
+  }
+li:last-child{
 
+    grid-column: 2/4;
+    grid-row: 5/6;
+  }
+button{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: none;
+    background-color: hsl(0, 0%, 30%);
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    
 }
 button:hover{
-  background-color: var(--button-hover);
-  color: var(--button-hover-text);
-
-}
-button:active{
-  background-color: var(--button-active);
-  color:  var(--button-active-text);
-}
-
-ul{
-  display: grid;
-  grid-template-columns: repeat(4,100px);
-  grid-template-rows: repeat(5, 100px);
-  padding: 20px;
-  gap: 15px;
-}
-
-
-.equal{
-  grid-column: 3/5;
-} 
-.zero{
-  grid-column: 1/3;
-}
-.clear{
-  grid-column: 1/3;
-  grid-row: 5/6;
-}
-
-.operator {
-  background-color: var(--button-operator);
-}
-.operator:hover{
-  background-color: var(--button-operator-hover);
-  color: var(--button-operator-hover-text);
-}
-.operator:active{
-  background-color: var(--button-operator-active);
-  color: var(--button-operator-active-text)
-}
+    background-color: var(--button-hover);
+    color: var(--button-hover-text);
+  
+  }
+  button:active{
+    background-color: var(--button-active);
+    color:  var(--button-active-text);
+  }
+  
+  .operator-btn {
+    background-color: var(--button-operator);
+  }
+  .operator-btn:hover{
+    background-color: var(--button-operator-hover);
+    color: var(--button-operator-hover-text);
+  }
+  .operator-btn:active{
+    background-color: var(--button-operator-active);
+    color: var(--button-operator-active-text)
+  }
